@@ -38,7 +38,7 @@ npx prisma migrate dev
 ```
 
 ### Optional: Datenbank befüllen
-Um die Anwendung sinnvoll testen zu können, kann die Datenbank mit Beispieldaten befüllt werden. Hierzu bitte `PLACEHOLDER` ausführen.
+Um die Anwendung sinnvoll testen zu können, kann die Datenbank mit Beispieldaten befüllt werden. Hierzu bitte `npm run role` und `npm run seed` ausführen.
 
 ### Anwendung starten
 Jetzt ist alles bereit. Die Anwendungen können mit folgendem Befehl gestartet werden:
@@ -46,3 +46,6 @@ Jetzt ist alles bereit. Die Anwendungen können mit folgendem Befehl gestartet w
 ```bash
 npm run dev
 ```
+
+Die Nutzer sind jetzt angelegt, der eigene Nutzer wird in der Datenbank ebenfalls angelegt und kann dann Anfragen ans Backend stellen. Da andere Nutzer bereits existieren, werden wir zunächst als _guest_ angelegt.
+Mittels `npx prisma studio` lässt sich die Weboberfläche von Prisma öffnen, die eigene role_id kann dann auf den gewünschten Wert (hier 1 für Admin) gesetzt werden.
